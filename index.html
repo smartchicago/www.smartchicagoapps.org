@@ -14,8 +14,8 @@ published: true
     <div class="span4">
         <h3>{{ post.title }}</h3>
         <p>{{ post.content }}</p>
-        {% if post.website %}<p>Web site: <a href="{{ post.website }}">{{ post.website}}</a></p>{% endif %}
-        {% if post.github %}<p>Github: <a href="{{ post.github }}">{{ post.github}}</a></p>{% endif %}
+        {% if post.website %}<p><a href="{{ post.website }}">{{ post.website}}</a></p>{% endif %}
+        {% if post.github %}<p><a href="{{ post.github }}">{{ post.github}}</a></p>{% endif %}
     </div>
     {% endfor %}
 </div>
