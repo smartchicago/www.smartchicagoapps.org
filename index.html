@@ -2,13 +2,29 @@
 layout: index
 published: true
 ---
+
 <div class="row">
+  <div class="span12" style="text-align:center;">
+    <img src="assets/img/smart-chicago-apps-logo.gif" alt="Smart Chicago Apps"/>
+  </div>
+</div>
+
+<div class="row" style="margin-top:40px; ">
     {% for post in site.posts %}
     <div class="span4">
-        <h2>{{ post.title }}</h2>
+        <h3>{{ post.title }}</h3>
         <p>{{ post.content }}</p>
         {% if post.website %}<p>Web site: <a href="{{ post.website }}">{{ post.website}}</a></p>{% endif %}
         {% if post.github %}<p>Github: <a href="{{ post.github }}">{{ post.github}}</a></p>{% endif %}
     </div>
     {% endfor %}
+</div>
+
+<div class="row">
+  <div class="span12">
+    <h2>About</h2>
+    <p>The <a href="http://www.smartchicagocollaborative.org">Smart Chicago Collaborative</a> offers civic developers in Chicago free access to Amazon Web Services and Heroku for hosting their applications.</p>
+    <p>If you are a developer and are interested in free hosting for your application, please <a href="www.smartchicagocollaborative.org/projects/hosted-web-space/">complete the sign up form</a>.</p>
+    <p>You can see a number of projects that Smart Chicago maintains and supports at the <a href="https://github.com/smartchicago">Smart Chicago Github page</a>.</p>
+  </div>
 </div>
