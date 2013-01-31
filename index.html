@@ -1,0 +1,14 @@
+---
+layout: index
+published: true
+---
+<div class="row">
+    {% for post in site.posts %}
+    <div class="span4">
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.content }}</p>
+        {% if post.website %}<p>Web site: <a href="{{ post.website }}">{{ post.website}}</a></p>{% endif %}
+        {% if post.github %}<p>Github: <a href="{{ post.github }}">{{ post.github}}</a></p>{% endif %}
+    </div>
+    {% endfor %}
+</div>
