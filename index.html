@@ -12,7 +12,8 @@ published: true
 <div class="row" style="margin-top:40px; ">
     {% for post in site.posts %}
     <div class="span4">
-        <h3>{{ post.title }}</h3>
+        {% if post.thumbnail %}<p><a href="{{ post.website }}"><img src="assets/img/thumbnails/{{ post.thumbnail }}" alt="Site screenshot"/></a></p>{% endif %}
+        <h3>{{ post.title }}</h3>        
         <p>{{ post.content }}</p>
         {% if post.website %}<p><a href="{{ post.website }}">{{ post.website}}</a></p>{% endif %}
         {% if post.github %}<p><a href="{{ post.github }}">{{ post.github}}</a></p>{% endif %}
