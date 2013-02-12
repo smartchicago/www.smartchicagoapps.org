@@ -19,7 +19,7 @@ published: true
         {% if post.github %}<p><a href="{{ post.github }}">{{ post.github}}</a></p>{% endif %}        
     </div>
     {% assign loop_index_modulo = forloop.index | modulo:3 %}
-    {% if loop_index_modulo == 0 %}{{ loop_index_modulo }}</div><div class="row">{% endif %}
+    {% if loop_index_modulo == 0 %}</div><div class="row">{% endif %}
     {% endfor %}
 </div>
 
