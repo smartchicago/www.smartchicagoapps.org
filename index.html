@@ -9,15 +9,17 @@ published: true
   </div>
 </div>
 
-<div class="row" style="margin-top:40px; ">
+<div class="row" style="margin-top:40px;">
     {% for post in site.posts %}
     <div class="span4">
         {% if post.thumbnail %}<p><a href="{{ post.website }}"><img src="assets/img/thumbnails/{{ post.thumbnail }}" alt="Site screenshot"/></a></p>{% endif %}
         <h3>{{ post.title }}</h3>        
         <p>{{ post.content }}</p>
         {% if post.website %}<p><a href="{{ post.website }}">{{ post.website}}</a></p>{% endif %}
-        {% if post.github %}<p><a href="{{ post.github }}">{{ post.github}}</a></p>{% endif %}
+        {% if post.github %}<p><a href="{{ post.github }}">{{ post.github}}</a></p>{% endif %}        
     </div>
+    {% assign loop_index_modulo = forloop.index | modulo:3 %}
+    {% if loop_index_modulo == 0 %}{{ loop_index_modulo }}</div><div class="row">{% endif %}
     {% endfor %}
 </div>
 
