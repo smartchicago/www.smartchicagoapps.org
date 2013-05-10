@@ -12,7 +12,14 @@ published: true
 <div class="row app-row" style="margin-top:40px;">
     {% for post in site.posts reversed %}
     <div class="span4">
-        {% if post.thumbnail %}<div class="site-thumbnail"><a href="{{ post.website }}"><img src="assets/img/thumbnails/{{ post.thumbnail }}" alt="Site screenshot" class="img-polaroid"/></a></div>{% endif %}
+        {% if post.thumbnail %}
+        <div class="site-thumbnail">
+            <a href="{{ post.website }}">
+                <img src="assets/img/thumbnails/{{ post.thumbnail }}" alt="Site screenshot" class="img-polaroid"/>
+            </a>
+            <span class="label" style="position:absolute; right: 10px; top: 10px;">{{ post.support }}</span>
+        </div>
+        {% endif %}
         <h3>{{ post.title }}</h3>        
         <p>{{ post.content }}</p>
         {% if post.website %}<p><i class="icon-home"></i> <a href="{{ post.website }}">{{ post.website}}</a></p>{% endif %}

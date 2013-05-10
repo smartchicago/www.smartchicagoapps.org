@@ -1,6 +1,7 @@
 div.site-thumbnail{
   height: 208px;
   width: 370px;
+  position: relative;
 }
 
 div.app-row {
