@@ -7,3 +7,11 @@ div.site-thumbnail{
 div.app-row {
   margin-bottom: 50px; 
 }
+
+.badge-hosted {
+  background-color: #0069aa;
+}
+
+.badge-developed {
+  background-color: #e51937;
+}

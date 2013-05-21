@@ -17,7 +17,7 @@ published: true
             <a href="{{ post.website }}">
                 <img src="assets/img/thumbnails/{{ post.thumbnail }}" alt="Site screenshot" class="img-polaroid"/>
             </a>
-            <span class="label" style="position:absolute; right: 10px; top: 10px;">{{ post.support }}</span>
+            <span class="label badge-{{ post.support }}" style="position:absolute; right: 10px; top: 10px;">{{ post.support }}</span>
         </div>
         {% endif %}
         <h3>{{ post.title }}</h3>        
