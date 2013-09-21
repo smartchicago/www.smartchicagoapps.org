@@ -1,5 +1,6 @@
 div.site-thumbnail{
-  min-height: 208px;
+  min-height: 210px;
+  height: 210px;
   width: 370px;
   position: relative;
 }
